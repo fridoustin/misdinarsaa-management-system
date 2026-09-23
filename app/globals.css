@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --color-primary: #8b1e2b;      /* maroon dari sabuk jubah misdinar di logo */
+  --color-on-primary: #f7ecc9;
+  --color-secondary: #b6892f;     /* gold gelap */
+  --color-accent: #d4af5a;        /* gold terang, dari lingkaran & sinar logo */
+  --color-background: #fbf7ec;    /* cream/parchment */
+  --color-foreground: #3a2c1a;    /* coklat tua untuk teks */
+  --color-surface: #ffffff;
+  --color-muted: #f1e6c8;
+  --color-border: #e3d3a3;
+  --color-success: #3f7d4a;
+  --color-warning: #b6892f;
+  --color-destructive: #a13327;
+  --color-ring: #8b1e2b;
+}
+
+[data-theme="dark"] {
+  --color-background: #241a10;    /* coklat tua dari background logo */
+  --color-foreground: #f3e6c4;
+  --color-surface: #362718;
+  --color-muted: #443220;
+  --color-border: #5a422a;
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-on-primary: var(--color-on-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-surface: var(--color-surface);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-destructive: var(--color-destructive);
+  --color-ring: var(--color-ring);
+  --font-heading: "Playfair Display", ui-sans-serif, system-ui;
+  --font-sans: "Open Sans", ui-sans-serif, system-ui;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+button, a[role="button"], input, select {
+  min-height: 44px;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
