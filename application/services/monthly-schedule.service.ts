@@ -23,21 +23,21 @@ export function computeMonthlySchedule(year: number, month1to12: number): Monthl
     const weekday = date.getDay();
 
     if (weekday === WEEKDAY.TUESDAY) {
-      items.push({ date: iso, time: "05:30", massTypeName: "Selasa" });
+      items.push({ date: iso, time: "18:30", massTypeName: "Selasa" });
     }
     if (weekday === WEEKDAY.FRIDAY) {
       fridayCount += 1;
       if (fridayCount === 1) {
-        items.push({ date: iso, time: "18:00", massTypeName: "Jumat Pertama" });
+        items.push({ date: iso, time: "18:30", massTypeName: "Jumat Pertama" });
       } else {
-        items.push({ date: iso, time: "05:30", massTypeName: "Jumat" });
+        items.push({ date: iso, time: "18:30", massTypeName: "Jumat" });
       }
     }
     if (weekday === WEEKDAY.SATURDAY) {
-      items.push({ date: iso, time: "17:00", massTypeName: "Sabtu Sore" });
+      items.push({ date: iso, time: "18:30", massTypeName: "Sabtu" });
     }
     if (weekday === WEEKDAY.SUNDAY) {
-      items.push({ date: iso, time: "07:00", massTypeName: "Minggu Pagi" });
+      items.push({ date: iso, time: "08:00", massTypeName: "Minggu Pagi" });
       items.push({ date: iso, time: "17:00", massTypeName: "Minggu Sore" });
     }
   }
